@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    background: linear-gradient(-90deg, #121010, #040a59);
+    animation: fadeInBody 2s ease-out;
+  }
+  
+  @keyframes fadeInBody {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  } 

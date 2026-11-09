@@ -1,0 +1,107 @@
+
+
+.team-h {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color:rgb(172, 172, 172);
+}
+.scroll-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-button {
+    background-color: #237ddd; 
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.scroll-button:disabled {
+    background-color: #ddd8d8;
+    cursor: not-allowed;
+}
+
+.scroll-button:hover{
+    background-color: #1d426a;
+}
+.scroll-button.left {
+    margin-right: 10px;
+}
+
+.scroll-button.right {
+    margin-left: 10px;
+}
+
+.scroll-wrapper {
+    overflow-x: auto;
+    display: flex;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.scroll-content {
+    display: flex;
+}
+
+.blog-box {
+    min-width: 300px; 
+    
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.blog-box:hover{
+    transform: scale(1.05);
+   
+}
+
+.blog-box h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #43ebb0;
+}
+
+.blog-box p {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #fdfdfd;
+}
+.icon {
+    
+    font-size: 40px; 
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    color: #007bff; 
+}
+@media (max-width: 768px) {
+    .blog-box {
+        flex: 0 0 200px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-box {
+        flex: 0 0 150px; 
+    }
+
+    .scroll-content {
+        gap: 10px;
+    }
+
+    .icon {
+        font-size: 20px; 
+    }
+}
+

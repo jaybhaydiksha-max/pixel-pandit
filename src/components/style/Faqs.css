@@ -1,0 +1,122 @@
+
+.faq-container {
+    width: 70%;
+    margin: 50px auto;
+    background: linear-gradient(-90deg, #222222, #072f84);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+  }
+  #faqs{
+    justify-content: center;
+    width: 300px;
+    margin-left: 350px;
+  }
+  .faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+  }
+  
+  .faq-question {
+    background-color: #09124e;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .faq-question:hover {
+    background-color: #303f9f;
+    transform: scale(1.02);
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #3f51b5;
+    margin-top: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .faq-answer.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    color: #555555;
+  }
+  
+  .toggle-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question.active .toggle-icon {
+    transform: rotate(180deg);
+  }
+  
+  @media (max-width: 768px) {
+    .faq-container {
+        padding: 10px; 
+    }
+
+    #faqs {
+        max-width: 70%; 
+        height: auto;
+        margin-left: 10px;
+    }
+
+    h2 {
+        font-size: 20px; 
+        margin-bottom: 15px;
+    }
+
+    .faq-question {
+        font-size: 14px;
+    }
+
+    .faq-answer p {
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        width: 100%; 
+        padding: 5px; 
+    }
+
+    #faqs {
+        max-width: 100%; /* Adjusted to fit smaller screens */
+        height: auto;
+    }
+
+    h2 {
+        font-size: 18px; 
+        margin-bottom: 10px;
+    }
+
+    .faq-question {
+        font-size: 12px;
+        padding: 10px; 
+    }
+
+    .faq-answer p {
+        font-size: 10px; 
+    }
+}

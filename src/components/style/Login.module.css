@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+.container12 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(11, 5, 56);
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100%;
+    margin: 50px;
+    left: 20%;
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    background-color: azure;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgb(48, 44, 44), 0 10px 10px rgb(48, 44, 44);
+    transition: all 0.6s ease-in-out;
+}
+
+.rightPanelActive .signIn12 {
+    transform: translateX(100%);
+}
+
+.rightPanelActive .signUp12 {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+.signUp12, .signIn12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.signUp12 {
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.signIn12 {
+    width: 50%;
+    z-index: 2;
+}
+
+.form200 {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.signIn12 h1, .signUp12 h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.signIn12 p, .signUp12 p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px;
+}
+
+.signIn12 input[type='text'], .signUp12 input[type='email'],input[type='password']  {
+    background-color: rgb(222, 214, 214);
+    padding: 12px 15px;
+    margin: 8px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #333;
+}
+.signUp12 input[type='text'],.signIn12 input[type='email'],input[type='password'] {
+    background-color: rgb(222, 214, 214);
+    padding: 12px 15px;
+    margin: 8px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #333;
+    outline: none;
+}
+
+.socialContainer12 a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.button12 {
+    color: azure;
+    background-color: rgb(5, 4, 59);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 55px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(3, 7, 51);
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.button12:active {
+    transform: scale(0.90);
+}
+
+#signIn, #signUp {
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+}
+
+.overlayContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.rightPanelActive .overlayContainer {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    position: relative;
+    color: white;
+    background-color: #ff416c;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(90deg, #333, #0a298c);
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.rightPanelActive .overlay {
+    transform: translateX(50%);
+}
+
+.overlayLeft, .overlayRight {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlayLeft {
+    transform: translateX(-20%);
+}
+
+.overlayRight {
+    right: 0;
+    transform: translateX(0%);
+}
+
+.rightPanelActive .overlayLeft {
+    transform: translateX(0);
+}
+
+.rightPanelActive .overlayRight {
+    transform: translateX(0);
+}
+
+.socialContainer12 {
+    margin: 20px 0;
+}
+
+.social1 {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+@media(max-width:768px){
+    .container12{
+        width: 90%; 
+        margin: 40px 0; 
+        height: 50vh;
+        align-items:center;
+        left: 20px;
+    }
+    .form200 {
+        padding: 0 3%;
+    }
+
+    .button12 {
+        padding: 10px 40px; 
+        font-size: 10px; 
+    }
+
+    .signIn12 input[type='text'], .signUp12 input[type='email'], input[type='password'] {
+        width: calc(100% - 20px); 
+    }
+}
